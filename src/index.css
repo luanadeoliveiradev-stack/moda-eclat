@@ -1,0 +1,1359 @@
+/* ==========================================
+   ÉCLAT — PREMIUM CSS
+   RESET + GLOBAL
+========================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=DM+Sans:wght@300;400;500&display=swap');
+
+:root {
+  --bg: #000000;
+  --text: #ffffff;
+  --accent: #d9c7a2;
+  --gray: #b5b5b5;
+  --transition: .45s ease;
+  --shadow: 0 20px 60px rgba(0, 0, 0, .35);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'DM Sans', sans-serif;
+  overflow-x: hidden;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+section {
+  position: relative;
+}
+
+.navbar{
+
+  position:fixed;
+
+  top:0;
+
+  left:0;
+
+  width:100%;
+
+  display:flex;
+
+  justify-content:space-between;
+
+  align-items:center;
+
+  padding:28px 70px;
+
+  z-index:9999;
+
+  background:
+
+  linear-gradient(
+
+    to bottom,
+
+    rgba(0,0,0,.58),
+
+    rgba(0,0,0,.18)
+
+  );
+
+  backdrop-filter:blur(18px);
+
+  border-bottom:1px solid rgba(255,255,255,.08);
+
+  transition:.45s;
+
+}
+
+/* ---------- LOGO ---------- */
+.logo{
+
+  font-family:'Cormorant Garamond', serif;
+
+  font-size:28px;
+
+  letter-spacing:18px;
+
+  font-weight:300;
+
+  transition:.5s;
+
+}
+
+.logo:hover{
+
+  letter-spacing:24px;
+
+}
+
+.logo:hover {
+  letter-spacing: 20px;
+}
+
+/* ---------- MENU ---------- */
+
+.navbar ul {
+  display: flex;
+  align-items: center;
+  gap: 42px;
+  list-style: none;
+}
+
+.navbar li {
+  position: relative;
+}
+
+.navbar a {
+  font-size: 13px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: white;
+  opacity: .88;
+  transition: .35s;
+}
+
+.navbar a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  width: 0;
+  height: 1px;
+  background: white;
+  transition: .4s;
+}
+
+.navbar a:hover {
+  opacity: 1;
+}
+
+.navbar a:hover::after {
+  width: 100%;
+}
+/* ==========================================
+   HERO PREMIUM V2
+========================================== */
+
+.hero{
+    position:relative;
+    width:100%;
+    height:100vh;
+    overflow:hidden;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+/* ==========================
+   VIDEO
+========================== */
+
+.hero-video{
+
+    position:absolute;
+    inset:0;
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+    object-position:center center;
+
+    transform:scale(1.08);
+
+    filter:
+        brightness(.78)
+        contrast(1.08)
+        saturate(.92);
+
+    z-index:0;
+}
+
+/* ==========================
+   OVERLAY
+========================== */
+
+.overlay{
+
+    position:absolute;
+    inset:0;
+
+    background:
+
+    radial-gradient(
+        circle at center,
+        rgba(0,0,0,.05),
+        rgba(0,0,0,.58)
+    ),
+
+    linear-gradient(
+        to bottom,
+        rgba(0,0,0,.15),
+        rgba(0,0,0,.68)
+    );
+
+    z-index:1;
+
+}
+
+/* ==========================
+   CONTENT
+========================== */
+
+.hero-content{
+
+    position:relative;
+    z-index:3;
+
+    width:100%;
+
+    display:flex;
+    flex-direction:column;
+
+    align-items:center;
+    justify-content:center;
+
+    text-align:center;
+
+    padding-top:40px;
+
+}
+
+/* ==========================
+   SUBTITLE
+========================== */
+
+.subtitle{
+
+    text-transform:uppercase;
+
+    letter-spacing:10px;
+
+    font-size:12px;
+
+    font-weight:300;
+
+    opacity:.82;
+
+    margin-bottom:35px;
+
+}
+
+/* ==========================
+   TITLE
+========================== */
+
+.hero-content h2{
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:clamp(90px,11vw,180px);
+
+    font-weight:300;
+
+    line-height:.82;
+
+    letter-spacing:-6px;
+
+    text-transform:uppercase;
+
+    text-shadow:
+        0 20px 60px rgba(0,0,0,.45);
+
+}
+
+/* ==========================
+   BUTTON
+========================== */
+
+.hero-content a{
+
+    margin-top:60px;
+
+    text-decoration:none;
+
+}
+
+.hero-content button{
+
+    width:260px;
+
+    height:64px;
+
+    background:rgba(255,255,255,.04);
+
+    border:1px solid rgba(255,255,255,.35);
+
+    backdrop-filter:blur(15px);
+
+    color:white;
+
+    letter-spacing:5px;
+
+    font-size:12px;
+
+    text-transform:uppercase;
+
+    transition:.45s;
+
+}
+
+.hero-content button:hover{
+
+    background:white;
+
+    color:black;
+
+    transform:translateY(-5px);
+
+    box-shadow:
+
+    0 20px 50px rgba(255,255,255,.12);
+
+}
+
+/* ==========================
+   SCROLL
+========================== */
+
+.scroll-indicator{
+
+    position:absolute;
+
+    bottom:45px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    z-index:5;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    gap:10px;
+
+    opacity:.75;
+
+}
+
+.scroll-indicator span:first-child{
+
+    font-size:11px;
+
+    letter-spacing:6px;
+
+}
+
+.scroll-indicator span:last-child{
+
+    font-size:28px;
+
+    animation:arrowMove 2s infinite;
+
+}
+
+@keyframes arrowMove{
+
+    0%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(8px);
+    }
+
+    100%{
+        transform:translateY(0);
+    }
+
+}
+
+/* ==========================================
+   EDITORIAL SECTION (manifesto)
+========================================== */
+
+.editorial {
+  background: #080808;
+  padding: 160px 8%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+}
+
+.editorial-content {
+  max-width: 860px;
+  text-align: center;
+}
+
+.editorial-small {
+  font-size: clamp(11px, 1.2vw, 13px);
+  letter-spacing: 8px;
+  text-transform: uppercase;
+  opacity: .6;
+  margin-bottom: 32px;
+}
+
+.editorial-content h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(52px, 7vw, 110px);
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -2px;
+  margin-bottom: 16px;
+}
+
+.editorial-content h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(28px, 3.5vw, 52px);
+  font-weight: 300;
+  font-style: italic;
+  color: var(--accent);
+  margin-bottom: 48px;
+}
+
+.editorial-text {
+  font-size: clamp(14px, 1.5vw, 17px);
+  line-height: 2;
+  color: #b5b5b5;
+  letter-spacing: 1px;
+}
+
+/* ==========================================
+   FASHION FILM
+========================================== */
+
+.fashion-film {
+  background: #050505;
+  padding: 160px 8%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.film-tag {
+  font-size: clamp(11px, 1.2vw, 13px);
+  letter-spacing: 8px;
+  text-transform: uppercase;
+  opacity: .6;
+  margin-bottom: 28px;
+}
+
+.film-text h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(48px, 6vw, 90px);
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -2px;
+  margin-bottom: 32px;
+}
+
+.film-text p:not(.film-tag) {
+  font-size: clamp(14px, 1.4vw, 16px);
+  line-height: 1.9;
+  color: #b5b5b5;
+  margin-bottom: 48px;
+}
+
+.film-text button {
+  padding: 18px 48px;
+  border: 1px solid rgba(255, 255, 255, .85);
+  background: transparent;
+  color: white;
+  font-size: clamp(11px, 1.2vw, 13px);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  transition: .45s;
+}
+
+.film-text button:hover {
+  background: white;
+  color: black;
+  transform: translateY(-3px);
+  box-shadow: 0 20px 50px rgba(255, 255, 255, .15);
+}
+
+.film-image {
+  overflow: hidden;
+}
+
+.film-image img {
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+  transition: 1.2s;
+}
+
+.film-image:hover img {
+  transform: scale(1.03);
+}
+
+/* ==========================================
+   COLLECTIONS
+========================================== */
+
+.collection-showcase{
+    background:#050505;
+    padding:180px 7%;
+}
+
+.collection-title{
+    font-family:'Cormorant Garamond', serif;
+    font-size:clamp(60px,8vw,110px);
+    font-weight:300;
+    letter-spacing:8px;
+    text-align:center;
+    margin-bottom:90px;
+}
+
+/* GRID */
+
+.collection-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:35px;
+}
+
+/* CARD */
+
+.collection-card{
+    position:relative;
+    overflow:hidden;
+    cursor:pointer;
+    background:#000;
+}
+
+/* IMAGEM */
+
+.collection-card img{
+    width:100%;
+    height:700px;
+    object-fit:cover;
+
+    transition:
+        transform 1.4s ease,
+        filter .8s ease;
+}
+
+/* OVERLAY */
+
+.collection-overlay{
+
+    position:absolute;
+    inset:0;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-end;
+
+    padding:45px;
+
+    background:
+    linear-gradient(
+        to top,
+        rgba(0,0,0,.88),
+        rgba(0,0,0,.28),
+        transparent
+    );
+
+}
+
+/* TÍTULO */
+
+.collection-overlay h3{
+
+    font-family:'Cormorant Garamond', serif;
+
+    font-size:38px;
+
+    font-weight:300;
+
+    letter-spacing:3px;
+
+    transform:translateY(30px);
+
+    opacity:0;
+
+    transition:.6s;
+
+}
+
+/* SUBTÍTULO */
+
+.collection-overlay span{
+
+    margin-top:12px;
+
+    font-size:12px;
+
+    letter-spacing:4px;
+
+    text-transform:uppercase;
+
+    opacity:0;
+
+    transform:translateY(20px);
+
+    transition:.7s;
+
+}
+
+/* HOVER */
+
+.collection-card:hover img{
+
+    transform:scale(1.08);
+
+    filter:brightness(.82);
+
+}
+
+.collection-card:hover .collection-overlay h3{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+.collection-card:hover .collection-overlay span{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+/* Linha elegante */
+
+.collection-overlay::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:45px;
+
+    bottom:110px;
+
+    width:55px;
+
+    height:1px;
+
+    background:white;
+
+    opacity:.55;
+
+}
+
+/* RESPONSIVO */
+
+@media(max-width:900px){
+
+    .collection-grid{
+        grid-template-columns:1fr;
+    }
+
+    .collection-card img{
+        height:500px;
+    }
+
+}
+/* ==========================================
+   MAISON SECTION
+========================================== */
+
+.maison {
+  background: #0a0a0a;
+  padding: 160px 8%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+}
+
+.maison-content {
+  max-width: 860px;
+  text-align: center;
+}
+
+.maison-tag {
+  font-size: clamp(11px, 1.2vw, 13px);
+  letter-spacing: 8px;
+  text-transform: uppercase;
+  opacity: .6;
+  margin-bottom: 32px;
+}
+
+.maison-content h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(52px, 7vw, 110px);
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -2px;
+  margin-bottom: 16px;
+}
+
+.maison-content h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(28px, 3.5vw, 52px);
+  font-weight: 300;
+  font-style: italic;
+  color: var(--accent);
+  margin-bottom: 48px;
+}
+
+.maison-text {
+  font-size: clamp(14px, 1.5vw, 17px);
+  line-height: 2;
+  color: #b5b5b5;
+  letter-spacing: 1px;
+}
+
+/* ==========================================
+   EDITORIAL GRID
+========================================== */
+
+.editorial-grid-section{
+
+    background:#070707;
+
+    padding:190px 7%;
+
+}
+
+.editorial-header{
+
+    text-align:center;
+
+    margin-bottom:90px;
+
+}
+
+.editorial-header p{
+
+    letter-spacing:8px;
+
+    text-transform:uppercase;
+
+    font-size:12px;
+
+    opacity:.55;
+
+    margin-bottom:20px;
+
+}
+
+.editorial-header h2{
+
+    font-family:'Cormorant Garamond', serif;
+
+    font-size:clamp(60px,8vw,110px);
+
+    font-weight:300;
+
+}
+
+/* GRID */
+
+.editorial-grid{
+
+    display:grid;
+
+    grid-template-columns:2fr 1fr;
+
+    grid-template-rows:380px 380px;
+
+    gap:28px;
+
+}
+
+/* CARD */
+
+.editorial-card{
+
+    position:relative;
+
+    overflow:hidden;
+
+    cursor:pointer;
+
+}
+
+/* IMAGEM */
+
+.editorial-card img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    transition:1.4s;
+
+}
+
+/* CARD GRANDE */
+
+.grid-large{
+
+    grid-row:1 / span 2;
+
+}
+
+/* OVERLAY */
+
+.editorial-overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    display:flex;
+
+    justify-content:flex-end;
+
+    flex-direction:column;
+
+    padding:45px;
+
+    background:linear-gradient(
+
+        transparent,
+
+        rgba(0,0,0,.82)
+
+    );
+
+}
+
+/* TÍTULO */
+
+.editorial-overlay h3{
+
+    font-family:'Cormorant Garamond', serif;
+
+    font-size:38px;
+
+    font-weight:300;
+
+    transform:translateY(30px);
+
+    opacity:0;
+
+    transition:.6s;
+
+}
+
+/* SUB */
+
+.editorial-overlay span{
+
+    margin-top:12px;
+
+    letter-spacing:4px;
+
+    font-size:12px;
+
+    opacity:0;
+
+    transform:translateY(15px);
+
+    transition:.7s;
+
+}
+
+/* HOVER */
+
+.editorial-card:hover img{
+
+    transform:scale(1.08);
+
+    filter:brightness(.82);
+
+}
+
+.editorial-card:hover h3{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+.editorial-card:hover span{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+/* RESPONSIVO */
+
+@media(max-width:900px){
+
+.editorial-grid{
+
+grid-template-columns:1fr;
+
+grid-template-rows:auto;
+
+}
+
+.grid-large{
+
+grid-row:auto;
+
+height:500px;
+
+}
+
+.editorial-card{
+
+height:350px;
+
+}
+
+}
+
+/* ==========================================
+   FOOTER PREMIUM
+========================================== */
+
+.footer {
+  background: #050505;
+  padding: 120px 8% 60px;
+  border-top: 1px solid rgba(255, 255, 255, .08);
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 80px;
+  margin-bottom: 60px;
+}
+
+.footer-logo {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 42px;
+  letter-spacing: 14px;
+  margin-bottom: 20px;
+}
+
+.footer-description {
+  max-width: 420px;
+  line-height: 1.8;
+  color: #bfbfbf;
+  font-size: clamp(13px, 1.3vw, 15px);
+}
+
+.footer-title {
+  font-size: 14px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.footer-links a {
+  color: #bdbdbd;
+  font-size: clamp(13px, 1.3vw, 15px);
+  transition: .35s;
+}
+
+.footer-links a:hover {
+  color: white;
+  padding-left: 8px;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, .08);
+  padding-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.footer-copy {
+  font-size: 13px;
+  color: #8d8d8d;
+}
+
+.footer-social {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-social a {
+  color: #bdbdbd;
+  transition: .35s;
+}
+
+.footer-social a:hover {
+  color: white;
+  transform: translateY(-3px);
+}
+
+/* ==========================================
+   PREMIUM ANIMATIONS
+========================================== */
+
+/* ---------- FADE UP ---------- */
+
+.fade-up {
+  opacity: 0;
+  transform: translateY(45px);
+  animation: fadeUp 1.2s ease forwards;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(45px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ---------- FADE IN ---------- */
+
+.fade {
+  animation: fade 1.5s ease forwards;
+}
+
+@keyframes fade {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* ---------- FLOAT ---------- */
+
+.float {
+  animation: float 5s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-12px); }
+  100% { transform: translateY(0); }
+}
+
+/* ---------- ZOOM ---------- */
+
+.zoom {
+  overflow: hidden;
+}
+
+.zoom img {
+  transition: 1.2s;
+}
+
+.zoom:hover img {
+  transform: scale(1.03);
+}
+
+/* ---------- BUTTON ---------- */
+
+button {
+  transition:
+    background .45s,
+    color .45s,
+    transform .45s,
+    box-shadow .45s;
+}
+
+button:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 40px rgba(255, 255, 255, .15);
+}
+
+/* ---------- LINKS ---------- */
+
+a {
+  transition: .35s;
+}
+
+a:hover {
+  opacity: .75;
+}
+
+/* ---------- IMAGENS ---------- */
+
+img {
+  transition: 1s;
+}
+
+img:hover {
+  filter: brightness(1.03);
+}
+
+/* ---------- SCROLL ---------- */
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* ==========================================
+   RESPONSIVO — MOBILE
+========================================== */
+
+@media (max-width: 900px) {
+
+  .navbar {
+    padding: 22px 30px;
+  }
+
+  .navbar ul {
+    gap: 20px;
+  }
+
+  .collection-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .collection-card img {
+    height: 420px;
+  }
+
+  .editorial-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
+  .grid-large {
+    grid-row: auto;
+  }
+
+  .editorial-card {
+    height: 320px;
+  }
+
+  .fashion-film {
+    grid-template-columns: 1fr;
+    gap: 48px;
+    padding: 100px 6%;
+  }
+
+  .film-image img {
+    height: 380px;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+}
+
+@media (max-width: 600px) {
+
+  .navbar ul {
+    display: none;
+  }
+
+  .hero-content {
+    padding: 70px 20px 0;
+  }
+
+  .editorial,
+  .maison {
+    padding: 100px 6%;
+  }
+
+  .collection-showcase,
+  .editorial-grid-section {
+    padding: 100px 6%;
+  }
+
+}
+section::after{
+
+  content:"";
+
+  position:absolute;
+
+  bottom:0;
+
+  left:50%;
+
+  transform:translateX(-50%);
+
+  width:120px;
+
+  height:1px;
+
+  background:rgba(255,255,255,.08);
+
+}
+.collection-card,
+.editorial-card,
+.film-image{
+
+  overflow:hidden;
+
+}
+
+.collection-card img,
+.editorial-card img,
+.film-image img{
+
+  transition:1.4s;
+
+  filter:brightness(.95);
+
+}
+
+.collection-card:hover img,
+.editorial-card:hover img,
+.film-image:hover img{
+
+  transform:scale(1.03);
+
+  filter:brightness(1.05);
+
+}
+.collection-image {
+  height: 700px;
+  overflow: hidden;
+}
+
+.collection-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.collection-info {
+  padding: 26px 8px 10px;
+  text-align: center;
+}
+
+.collection-info p {
+  color: var(--accent);
+  font-size: 11px;
+  letter-spacing: 4px;
+  margin-bottom: 12px;
+}
+
+.collection-info h3 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 34px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  margin-bottom: 14px;
+}
+
+.collection-info span {
+  display: block;
+  color: #a9a9a9;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+@media (max-width: 900px) {
+  .collection-image {
+    height: 500px;
+  }
+}
+.editorial-grid {
+  grid-template-rows: auto auto;
+  align-items: start;
+}
+
+.editorial-card {
+  overflow: visible;
+}
+
+.editorial-image {
+  height: 380px;
+  overflow: hidden;
+}
+
+.grid-large .editorial-image {
+  height: 788px;
+}
+
+.editorial-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.editorial-info {
+  padding: 24px 6px 34px;
+  text-align: center;
+}
+
+.editorial-info span {
+  color: var(--accent);
+  font-size: 11px;
+  letter-spacing: 4px;
+}
+
+.editorial-info h3 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 34px;
+  font-weight: 400;
+  margin: 12px 0;
+}
+
+.editorial-info p {
+  color: #a9a9a9;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+@media (max-width: 900px) {
+  .editorial-card,
+  .grid-large {
+    height: auto;
+  }
+
+  .editorial-image,
+  .grid-large .editorial-image {
+    height: 460px;
+  }
+}
